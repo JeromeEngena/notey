@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "118636212101",
+    "project_id": "notey-e21c9",
+    "storage_bucket": "notey-e21c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118636212101:android:26546bed228f4621f45eec",
+        "android_client_info": {
+          "package_name": "com.kakak.notey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzXho4ncTokm82dBk1kEN6ax2PdLQ1Icw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
