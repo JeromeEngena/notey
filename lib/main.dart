@@ -7,9 +7,9 @@ import 'package:notey/views/login_view.dart';
 import 'package:notey/views/register_view.dart';
 import 'package:notey/views/verify_email_view.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
