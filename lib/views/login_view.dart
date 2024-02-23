@@ -58,9 +58,29 @@ class _LoginViewState extends State<LoginView> {
               final email = _email.text;
               final password = _password.text;
               try {
-                await FirebaseAuth.instance
-                    .signInWithEmailAndPassword(
-                        email: email, password: password);
+                await FirebaseAuth.instance.signInWithEmailAndPassword(
+                  email: email,
+                  password: password,
+                );
+
+                final user = FirebaseAuth.instance.currentUser;
+                if (user?.emailVerified ?? false) {
+                  // if the email is verified
+                  if (context.mounted){
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                    notesRoute,
+                    (route) => false,
+                  );
+                  }
+                } else {
+                  // email NOT verified
+                  if (context.mounted){
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                    verifyEmailRoute,
+                    (route) => false,
+                  );
+                  }
+                }
                 if (context.mounted) {
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     notesRoute,
@@ -90,13 +110,13 @@ class _LoginViewState extends State<LoginView> {
                     );
                   }
                 }
-              } catch(e){
+              } catch (e) {
                 if (context.mounted) {
-                    await showErrorDialog(
-                      context,
-                      e.toString(),
-                    );
-                  }
+                  await showErrorDialog(
+                    context,
+                    e.toString(),
+                  );
+                }
               }
             },
             child: const Text('Login'),
@@ -115,4 +135,3 @@ class _LoginViewState extends State<LoginView> {
     );
   }
 }
-
