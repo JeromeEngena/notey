@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notey/services/auth/auth_service.dart';
-import 'package:notey/services/crud/notes_services.dart';
+import 'package:notey/services/crud/notes_service.dart';
 import 'package:notey/utilities/generics/get_arguments.dart';
 
 class CreateUpdateNoteView extends StatefulWidget {

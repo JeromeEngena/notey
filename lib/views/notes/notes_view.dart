@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notey/constants/routes.dart';
 import 'package:notey/enums/menu_action.dart';
 import 'package:notey/services/auth/auth_service.dart';
-import 'package:notey/services/crud/notes_services.dart';
+import 'package:notey/services/crud/notes_service.dart';
 import 'package:notey/utilities/dialogs/logout_dialog.dart';
 import 'package:notey/views/notes/notes_list_view.dart';
 
