@@ -224,7 +224,6 @@ class NotesService {
     try {
       await open();
     } on DatabaseAlreadyOpenException {
-      rethrow;
       // improvised this bit. Confirm viability
       //  throw DatabaseAlreadyOpenException();
     }
